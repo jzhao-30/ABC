@@ -1,0 +1,146 @@
+/* This is total all wrapper */
+.wrapper {
+    width: 100vw;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-name: changeColor; */
+
+}
+
+/* This is content wrapper. */
+.content-wrapper-mainpage {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(31, 73, 224);
+    /*  容器中有绝对定位元素，隐藏父亲元素overflow，父亲元素定位需要是relative才可以。 */
+    position: relative;
+    overflow-x: hidden;
+}
+
+
+
+@keyframes hd {
+    50% {
+        transform: scale(50);
+        z-index: 1;
+    }
+
+    100% {
+        transform: scale(1);
+        background-color: black;
+        z-index: 1;
+    }
+
+}
+
+@keyframes another {
+    50% {
+        transform: scale(50);
+        z-index: 1;
+    }
+
+    100% {
+        transform: scale(1);
+        background-color: black;
+        z-index: 1;
+    }
+
+}
+
+@keyframes appear {
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        oacity: 1;
+    }
+
+}
+
+
+@keyframes lightMode {
+
+
+    100% {
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+        z-index: 1;
+    }
+}
+
+
+.btnWrapper,
+.lightWrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+
+.mainContent {
+    position: relative;
+    z-index: 100;
+    margin-top: 140px;
+}
+
+
+
+h1 {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    font-size: 20px;
+    color: #ccc;
+}
+
+h1::before {
+
+    /* This will create the layer
+           over original text*/
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    /* Setting different color than
+           that of original text  */
+    color: green;
+    overflow: hidden;
+
+    /* Setting width to 0*/
+    width: 0%;
+    height: 100px;
+    transition: 1s;
+}
+
+h1:hover::before {
+
+    /* Setting width to 100 on hover*/
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+.line-mask{
+    position: absolute;
+    right:0;
+    background-color:rgb(31,72,224);
+    height: 100px;
+    opacity: .85;
+    transition:width 10s;
+	-webkit-transition:width 0.5s; /* Safari */
+    z-index: 2;
+}
+
+/* .line-mask :hover{
+    width: 1000px;
+} */

@@ -1,5 +1,5 @@
 /* This is total all wrapper */
-.wrapper{
+.wrapper-home{
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -12,23 +12,29 @@
 
 }
 
+    
 /* This is content wrapper. */
 .content-wrapper{
     width: 100%;
-    height: 100vh;
-    background-color: rgb(31,73,224)
+    height: 100%;
+    background-color: rgb(31,73,224);
+    /*  容器中有绝对定位元素，隐藏父亲元素overflow，父亲元素定位需要是relative才可以。 */
+    position: relative;
+    overflow: hidden;
 }
 
 
 .test{
-    width: 100px;
-    height: 100px;
+    width: 233px;
+    height: 233px;
     background-color: black;
     border-radius: 50%;
     z-index: 1;
     position:absolute;
-    right:-20px;
-    top:-30px
+    right:-60px;
+    top:-60px;
+    cursor: pointer;
+    border-radius: 50%;
 }
 
 .textpage{
@@ -44,11 +50,24 @@
 } */
 
 .textpage{
-    z-index: 99;
+    /* z-index: 99; */
 }
 
 
 @keyframes hd {
+    50%{
+        transform: scale(50);
+        z-index: 1;
+    }
+
+    100%{
+        transform: scale(1);
+        background-color: black;
+        z-index: 1;
+    }
+
+}
+@-webkit-keyframes hd {
     50%{
         transform: scale(50);
         z-index: 1;
@@ -76,7 +95,32 @@
 
 }
 
+@-webkit-keyframes another {
+    50%{
+        transform: scale(50);
+        z-index: 1;
+    }
+
+    100%{
+        transform: scale(1);
+        background-color: black;
+        z-index: 1;
+    }
+
+}
+
 @keyframes appear {
+    50%{
+        opacity: 0;
+    }
+
+    100%{
+        oacity:1;
+    }
+
+}
+
+@-webkit-keyframes appear {
     50%{
         opacity: 0;
     }
@@ -89,11 +133,15 @@
 
 
 .test2{
-    width: 100px;
-    height: 100px;
-    background-color: white;
+    width: 233px;
+    height: 233px;
+    background-color: rgb(32,73,217);
     border-radius: 50%;
-    position: relative;
+    position: absolute;
+    right:-60px;
+    top:-60px;
+    cursor: pointer;
+    /* border-radius: 50%; */
     /* animation-name:appear;
     animation-duration: 2s; */
 }
@@ -110,10 +158,231 @@
     }
 }
 
+@-webkit-keyframes lightMode {
+
+
+    100%{
+        border-radius: 50%;
+        width:100px;
+        height: 100px;
+        z-index: 1;
+    }
+}
+
 
 .btnWrapper, .lightWrapper{
     width: 100%;
     display: flex;
     flex-direction: row-reverse;
+}
+
+
+
+/* element css */
+
+.paomadeng-wrapper{
+    width: 100%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    /* background-color: red; */
+    position: fixed;
+    bottom:30px;
+    z-index: 2;
+}
+
+.firstLine, .secondLine,.thirdLine{
+    /* height: 133px; */
+    width: 100%;
+    /* background-color: white; */
+    margin-bottom: 10px;
+
+    position: relative;
+}
+
+@keyframes kf-marque-animation{ 0% { transform: translateX(0); } 100% { transform: translateX(-33.3%); } }
+@-webkit-keyframes kf-marque-animation{ 0% { transform: translateX(0); } 100% { transform: translateX(-33.3%); } }
+@-moz-keyframes kf-marque-animation{ 0% { transform: translateX(0); } 100% { transform: translateX(-33.3%); } }
+@-o-keyframes kf-marque-animation{ 0% { transform: translateX(0); } 100% { transform: translateX(-33.3%); } }
+@-moz-keyframes kf-marque-animation{ 0% { transform: translateX(0); } 100% { transform: translateX(-33.3%); } }
+.firstLine {
+  width: 100%;
+  line-height: 44px;
+  /* background: #e9eaea; */
+  display: block;
+  margin: 0 auto;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: clip;
+  position: relative;
+}
+
+.firstLine .content{
+  display: inline-block;
+  position: relative;
+  padding-right: 0px;
+  white-space: nowrap;
+  animation: kf-marque-animation 12s 0.5s infinite linear;
+  -webkit-animation: kf-marque-animation 12s 0.5s infinite linear;
+  -moz-animation: kf-marque-animation 12s 0.5s infinite linear;
+  -o-animation: kf-marque-animation 12s 0.5s infinite linear;
+}
+
+.firstLine .content-space{
+  display: inline-block;
+  width: 5em;
+  /* width: 100px; */
+}
+
+.paomadeng-wrapper{
+    cursor: url('../../material/cursor.ico'), auto;
+    
+}
+
+.linklink{
+    cursor: url('../../material/cursor.ico'), auto;
+    
+}
+
+
+@keyframes kf-marque-animation{ 0% { transform: translateX(0); } 100% { transform: translateX(-33.3%); } }
+@-webkit-keyframes kf-marque-animation{ 0% { transform: translateX(0); } 100% { transform: translateX(-33.3%); } }
+@-moz-keyframes kf-marque-animation{ 0% { transform: translateX(0); } 100% { transform: translateX(-33.3%); } }
+@-o-keyframes kf-marque-animation{ 0% { transform: translateX(0); } 100% { transform: translateX(-33.3%); } }
+@-moz-keyframes kf-marque-animation{ 0% { transform: translateX(0); } 100% { transform: translateX(-33.3%); } }
+
+.thirdLine {
+  width: 100%;
+  line-height: 44px;
+  /* background: #e9eaea; */
+  display: block;
+  margin: 0 auto;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: clip;
+  position: relative;
+}
+
+.thirdLine .content{
+  display: inline-block;
+  position: relative;
+  padding-right: 0px;
+  white-space: nowrap;
+  animation: kf-marque-animation 12s 0.5s infinite linear;
+  -webkit-animation: kf-marque-animation 12s 0.5s infinite linear;
+  -moz-animation: kf-marque-animation 12s 0.5s infinite linear;
+  -o-animation: kf-marque-animation 12s 0.5s infinite linear;
+}
+
+.thirdLine .content-space{
+  display: inline-block;
+  width: 5em;
+  /* width: 100px; */
+}
+
+@-webkit-keyframes kf-marque-animation{ 0% { transform: translateX(0); } 100% { transform: translateX(-33.3%); } }
+@keyframes kf-marque-animation{ 0% { transform: translateX(0); } 100% { transform: translateX(-33.3%); } }
+@-moz-keyframes kf-marque-animation{ 0% { transform: translateX(0); } 100% { transform: translateX(-33.3%); } }
+@-o-keyframes kf-marque-animation{ 0% { transform: translateX(0); } 100% { transform: translateX(-33.3%); } }
+@-moz-keyframes kf-marque-animation{ 0% { transform: translateX(0); } 100% { transform: translateX(-33.3%); } }
+
+.thirdLine {
+  width: 100%;
+  line-height: 44px;
+  /* background: #e9eaea; */
+  display: block;
+  margin: 0 auto;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: clip;
+  position: relative;
+}
+
+.thirdLine .content{
+  display: inline-block;
+  position: relative;
+  padding-right: 0px;
+  white-space: nowrap;
+  animation: kf-marque-animation 12s 0.5s infinite linear;
+  -webkit-animation: kf-marque-animation 12s 0.5s infinite linear;
+  -moz-animation: kf-marque-animation 12s 0.5s infinite linear;
+  -o-animation: kf-marque-animation 12s 0.5s infinite linear;
+}
+
+.thirdLine .content-space{
+  display: inline-block;
+  width: 5em;
+  /* width: 100px; */
+}
+
+@-webkit-keyframes kf-marque-animation-right{ 0% { transform: translateX(-33.3%);} 100% { transform: translateX(0);  } }
+@keyframes kf-marque-animation-right{ 0% { transform: translateX(-33.3%);} 100% { transform: translateX(0);  } }
+@-moz-keyframes kf-marque-animation-right{ 0% { transform: translateX(-33.3%);} 100% { transform: translateX(0);  } }
+@-o-keyframes kf-marque-animation-right{ 0% { transform: translateX(-33.3%);} 100% { transform: translateX(0);  } }
+@-moz-keyframes kf-marque-animation-right{ 0% { transform: translateX(-33.3%);} 100% { transform: translateX(0);  } }
+.secondLine {
+  width: 100%;
+  line-height: 44px;
+  /* background: #e9eaea; */
+  display: block;
+  margin: 0 auto;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: clip;
+  position: relative;
+}
+
+.secondLine .content{
+  display: inline-block;
+  position: relative;
+  padding-right: 0px;
+  white-space: nowrap;
+  animation: kf-marque-animation-right 12s 0.5s infinite linear;
+  -webkit-animation: kf-marque-animation-right 12s 0.5s infinite linear;
+  -moz-animation: kf-marque-animation-right 12s 0.5s infinite linear;
+  -o-animation: kf-marque-animation-right 12s 0.5s infinite linear;
+}
+
+/* .content-wrapper{
+
+    transform: perspective(400px);
+    -ms-transform: perspective(400px);
+    -moz-transform: perspective(400px);
+    -webkit-transform: perspective(400px);
+    -o-transform: perspective(400px);
+} */
+
+.secondLine .content-space{
+  display: inline-block;
+  width: 5em;
+  /* width: 100px; */
+}
+
+
+@media (max-width: 850px) {
+	.paomadeng-wrapper{
+        width: 100%;
+        height: 300px;
+        display: flex;
+        flex-direction: column;
+        /* background-color: red; */
+        position: fixed;
+        bottom:180px;
+        z-index: 2;
+    }
+
+    .firstLine, .secondLine,.thirdLine{
+        /* height: 100px; */
+        width: 100%;
+        /* background-color: white; */
+        margin-bottom: -30px;
+    
+        position: relative;
+    }
+
+    .wrapper-home{
+        height: 150vh;
+    }
+
 }
 

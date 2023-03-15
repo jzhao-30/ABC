@@ -1,0 +1,299 @@
+body {
+	/* background-color: rgb(41,72,215); */
+}
+
+.page-wrapper {
+	display: flex;
+	flex-direction: column;
+	padding: 2em;
+	max-width: 90vw;
+	margin-inline: auto;
+	min-width: 300px;
+}
+.about-h2 {
+	font-family: "Poppins";
+	font-style: normal;
+	font-weight: 600;
+	font-size: 80px;
+	line-height: 120.5%;
+	display: flex;
+	align-items: center;
+	text-transform: lowercase;
+	color: #ffffff;
+	margin-bottom: 100px;
+}
+.about-str {
+	font-family: "Poppins";
+	font-style: normal;
+	font-weight: 600;
+	font-size: 80px;
+	line-height: 120.5%;
+	display: flex;
+	align-items: center;
+	text-transform: lowercase;
+	color: #ffffff;
+	margin-bottom: 100px;
+	margin-top: 300px;
+	margin-right: auto;
+	text-align: left;
+}
+
+.about-banner {
+	margin-bottom: -80px;
+}
+.about-para {
+	/* width: 50%; */
+	/* width: 720px; */
+	height: 100%;
+	width: 100%;
+	font-size: 30px;
+	font-family: "Space Grotesk";
+	font-style: normal;
+	font-weight: 700;
+	line-height: 130%;
+	color: #ffffff;
+	opacity: 1;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+/* This is total all wrapper */
+.wrapper {
+	width: 100vw;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	/* animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-name: changeColor; */
+}
+
+/* This is content wrapper. */
+.content-wrapper-mainpage {
+	width: 100%;
+	height: 100%;
+	background-color: rgb(31, 73, 224);
+	/*  容器中有绝对定位元素，隐藏父亲元素overflow，父亲元素定位需要是relative才可以。 */
+	position: relative;
+	overflow-x: hidden;
+}
+
+@keyframes hd {
+	50% {
+		transform: scale(50);
+		z-index: 1;
+	}
+
+	100% {
+		transform: scale(1);
+		background-color: black;
+		z-index: 1;
+	}
+}
+
+@keyframes another {
+	50% {
+		transform: scale(50);
+		z-index: 1;
+	}
+
+	100% {
+		transform: scale(1);
+		background-color: black;
+		z-index: 1;
+	}
+}
+
+@keyframes appear {
+	50% {
+		opacity: 0;
+	}
+
+	100% {
+		oacity: 1;
+	}
+}
+
+@keyframes lightMode {
+	100% {
+		border-radius: 50%;
+		width: 100px;
+		height: 100px;
+		z-index: 1;
+	}
+}
+
+.btnWrapper,
+.lightWrapper {
+	width: 100%;
+	display: flex;
+	flex-direction: row-reverse;
+}
+
+.mainContent {
+	position: relative;
+	z-index: 100;
+	margin-top: 140px;
+}
+
+.lineMask {
+	width: 100%;
+	height: 100%;
+	/* background-color: black; */
+	background-color: rgb(224, 31, 31);
+	/* background-color: black; */
+	opacity: 0.85;
+	position: absolute;
+	right: 0;
+	-webkit-transition: width 0.4s ease;
+	z-index: 2;
+}
+
+.line {
+	position: absolute;
+}
+
+.line-wrapper {
+	position: relative;
+	width: 100%;
+	height: 40px;
+}
+
+.textWrapper {
+	width: 850px;
+	margin-top: 100px;
+}
+
+@media (max-width: 850px) {
+	.page-wrapper {
+		display: flex;
+		flex-direction: column;
+		padding: 0em;
+		max-width: 90vw;
+		margin-inline: auto;
+		min-width: 300px;
+	}
+	.textWrapper {
+		width: 100%;
+		margin-top: 100px;
+	}
+
+	.line-wrapper {
+		position: relative;
+		width: 100%;
+		height: 30px;
+	}
+
+	.about-para {
+		font-size: 20px;
+	}
+
+	.about-h2 {
+		font-size: 50px;
+	}
+}
+
+@media (max-width: 630px) {
+	.textWrapper {
+		width: 100%;
+		margin-top: 100px;
+	}
+
+	.line-wrapper {
+		position: relative;
+		width: 100%;
+		height: 30px;
+	}
+	.about-para {
+		font-size: 18px;
+	}
+
+	.about-h2 {
+		font-size: 50px;
+	}
+}
+
+@media (max-width: 570px) {
+	.about-para {
+		font-size: 16px;
+	}
+
+	.line-wrapper {
+		position: relative;
+		width: 100%;
+		height: 30px;
+	}
+}
+
+@media (max-width: 505px) {
+	.about-para {
+		font-size: 14px;
+	}
+
+	.line-wrapper {
+		position: relative;
+		width: 100%;
+		height: 30px;
+	}
+}
+
+@media (max-width: 450px) {
+	.about-para {
+		font-size: 12px;
+	}
+
+	.line-wrapper {
+		position: relative;
+		width: 120%;
+		height: 30px;
+	}
+}
+
+.image-wrapper {
+	position: relative;
+	display: grid;
+	grid-template-columns: auto, auto, auto, auto, auto;
+	margin-top: -150px;
+	margin-bottom: 200px;
+	width: 100vw;
+	height: 70vw;
+}
+
+.sin-img {
+	width: 40%;
+	position: absolute;
+	cursor: pointer;
+}
+@media (max-width: 850px) {
+	.image-wrapper {
+		position: relative;
+		display: grid;
+		grid-template-columns: auto, auto, auto, auto, auto;
+		margin-top: -100px;
+		margin-bottom: 300px;
+		width: 100vw;
+		height: 70vw;
+		transform: translateX(-30px);
+	}
+
+	.sin-img {
+		width: 50%;
+		position: absolute;
+		cursor: pointer;
+	}
+	.about-str {
+		font-family: "Poppins";
+		font-style: normal;
+		font-weight: 600;
+		font-size: 50px;
+		line-height: 120.5%;
+		display: flex;
+		align-items: center;
+		text-transform: lowercase;
+		color: #ffffff;
+		margin-bottom: 100px;
+		margin-top: 100px;
+	}
+}
