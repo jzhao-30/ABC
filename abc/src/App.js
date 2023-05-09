@@ -1,7 +1,7 @@
 /** @format */
 
 import "./App.css";
-import React from "react";
+import React, { useEffect } from "react";
 import {
 	BrowserRouter as Router,
 	Route,
@@ -22,6 +22,13 @@ import ContentsEvent from "./screen/EventsPage/ContentsEvent";
 import PostPageEvent from "./screen/EventsPage/PostPageEvent";
 
 function App() {
+	useEffect(()=>{
+		if(localStorage.getItem('background')!== null){
+			console.log(localStorage.getItem('background'))
+		}else{
+			localStorage.setItem('background', 'rgb(31,73,224)')
+		}
+	},[])
 	return (
 		<Router>
 			<div>

@@ -18,7 +18,7 @@ import poster from './Web3 Uni Roundtable Discussion/poster.svg'
 
 const PostPageEvent = (props) => {
 	const { slug } = useParams();
-	const [style, setStyle] = useState();
+	const [style, setStyle] = useState('');
 
 	const getChildMsg = (msg) => {
 		setStyle(msg);
@@ -28,11 +28,19 @@ const PostPageEvent = (props) => {
 		<>
 			<div
 				className="relative min-h-[100vh] max-w-[100vw] overflow-hidden"
-				style={{
+				style={
+					localStorage.getItem('background')?
+					{
+					// position: "relative",
+					// minHeight: "100vh",
+					backgroundColor: localStorage.getItem('background'),
+				}:
+				{
 					// position: "relative",
 					// minHeight: "100vh",
 					backgroundColor: style,
-				}}>
+				}
+			}>
 				<LightAdDark getMsg={getChildMsg} />
 				
 				{/* SEO Section */}

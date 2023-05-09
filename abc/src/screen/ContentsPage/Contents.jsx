@@ -18,9 +18,22 @@ const Contents = (props) => {
 	return (
 		<div
 			className="overflow-hidden min-h-screen relative"
-			style={{
+			style={
+				localStorage.getItem('background')?
+				{
+				// position: "relative",
+				// minHeight: "100vh",
+				backgroundColor: localStorage.getItem('background'),
+			}:
+			{
+				// position: "relative",
+				// minHeight: "100vh",
 				backgroundColor: style,
-			}}>
+			}
+		}
+			
+			
+			>
 			{/* SEO Section */}
 			<div>
 				<Helmet>

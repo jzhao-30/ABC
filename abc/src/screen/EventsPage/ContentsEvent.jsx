@@ -1,6 +1,6 @@
 /** @format */
 
-import React from "react";
+import React, { useEffect } from "react";
 import Menu from "../../components/Menu";
 import Footer from "../../components/Footer";
 import { Helmet } from "react-helmet";
@@ -14,13 +14,24 @@ const ContentsEvent = (props) => {
 	const getChildMsg = (msg) => {
 		setStyle(msg);
 	};
+	
 
 	return (
 		<div
 			className="overflow-hidden min-h-screen relative"
-			style={{
+			style={
+				localStorage.getItem('background')?
+				{
+				// position: "relative",
+				// minHeight: "100vh",
+				backgroundColor: localStorage.getItem('background'),
+			}:
+			{
+				// position: "relative",
+				// minHeight: "100vh",
 				backgroundColor: style,
-			}}>
+			}
+		}>
 			{/* SEO Section */}
 			<div>
 				<Helmet>

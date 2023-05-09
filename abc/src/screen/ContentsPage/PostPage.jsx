@@ -25,11 +25,19 @@ const PostPage = (props) => {
 		<>
 			<div
 				className="relative min-h-[100vh] max-w-[100vw] overflow-hidden"
-				style={{
+				style={
+					localStorage.getItem('background')?
+					{
+					// position: "relative",
+					// minHeight: "100vh",
+					backgroundColor: localStorage.getItem('background'),
+				}:
+				{
 					// position: "relative",
 					// minHeight: "100vh",
 					backgroundColor: style,
-				}}>
+				}
+			}>
 				<LightAdDark getMsg={getChildMsg} />
 				{/* SEO Section */}
 				<div>
