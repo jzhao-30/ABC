@@ -18,6 +18,8 @@ import EventsComingSoon from "./screen/EventsPage/EventsComingSoon";
 import ContentsComingSoon from "./screen/ContentsPage/ContentsComingSoon";
 import Contents from "./screen/ContentsPage/Contents";
 import PostPage from "./screen/ContentsPage/PostPage";
+import ContentsEvent from "./screen/EventsPage/ContentsEvent";
+import PostPageEvent from "./screen/EventsPage/PostPageEvent";
 
 function App() {
 	return (
@@ -27,10 +29,12 @@ function App() {
 					<Route path="/" element={<Home />} />
 					<Route path="/about" element={<About />} />
 					{/* <Route path="/dark" element={<Dark />} /> */}
-					<Route path="/events" element={<EventsComingSoon />} />
+					{/* <Route path="/events" element={<EventsComingSoon />} /> */}
+					<Route path="/events" element={<ContentsEvent />} />
 					<Route path="/contents" element={<Contents />} />
 					{/* <Route path="/test" element={<Contents />} /> */}
 					<Route path="/contents/:slug" element={<PostPage />} />
+					<Route path="/events/:slug" element={<PostPageEvent />} />
 				</Routes>
 			</div>
 		</Router>
